@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de notas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TechCode Innovations</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Tarefas</a></li>
+                    <li><a href="#" id="selecionado">Contatos</a></li>
+                    <li><a href="#">Minha conta</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="inputs-container container">
+                <form id="form-procura-contato">
+                    <input type="text" class="inputs" placeholder="Procurar um contato">
+                    <button class="botao botao-icone-pesquisa positivo"><img src="imagens/search-icon.png" alt="botão de pesquisar"></button>
+                </form>
+                <div class="lista-botoes">
+                    <button type="button" class="botao positivo" onclick="abrirModal()">Adicionar contato</button>
+                    <button type="button" class="botao negativo">Excluir contato</button>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Número de telefone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="agenda-vazia">
+                        <td colspan="3">Sua agenda está vazia! Comece adicionando contatos</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container modal-container" id="modal-container">
+            <div class="modal">
+                <form id="form-contato">
+                    <h2>Adicionar contato</h2>
+                    <input type="text" class="inputs" id="nome" required placeholder="Nome Completo">
+                    <input type="tel" class="inputs" id="telefone" placeholder="Número de telefone">
+                    <input type="email" class="inputs" id="email" placeholder="E-mail">
+                    <div class="lista-botoes">
+                        <button type="submit" class="botao positivo">Salvar</button>
+                        <button type="button" class="botao negativo" onclick="fecharModal()">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="modal.js"></script>
+    <script src="contatos.js"></script>
+</body>
+</html>

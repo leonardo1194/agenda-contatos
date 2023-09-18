@@ -1,0 +1,183 @@
+/*   RESET E BÁSICOS   */
+:root {
+    --azul: #007F99;
+    --laranja: #ff7f00;
+    --jade: #00a86b;
+    --vermelho: #a80037;
+    --branco-fumaca: #f5f5f5;
+    --prata: #cfcfcf;
+    --quantum: #111;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--branco-fumaca);
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*   HEADER   */
+header {
+    background-color: var(--azul);
+    width: 100%;
+    color: var(--branco-fumaca);
+}
+
+header li {
+    display: inline;
+    padding-left: 24px;
+    text-transform: uppercase;
+}
+
+header h1 {
+    padding: 8px 0;
+}
+
+header a {
+    text-decoration: none;
+    padding: 4px;
+    color: var(--branco-fumaca);
+    border-radius: 2px;
+}
+
+header a:focus {          
+    outline: 1px solid var(--prata);   
+}
+
+header a:hover,
+#selecionado {
+    border-bottom: 3px solid var(--laranja);
+}
+
+/*   MAIN CONTAINER   */
+main .container {
+    flex-direction: column;  /*  Por padrão, o flex-direction é "row"  */
+    align-items: end;
+}
+
+/*   SEÇÃO DE PESQUISAR CONTATOS E BOTÕES   */
+.botao {
+    color: var(--branco-fumaca);
+    background-color: var(--quantum);
+    padding: 8px;
+    border: none;
+    border-radius: 2px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.positivo {
+    background-color: var(--jade);
+}
+
+.negativo {
+    background-color: var(--vermelho);
+}
+
+main .inputs-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 64px 0 16px 0;
+}
+
+.inputs-container img {
+    height: 24px;
+}
+
+.inputs-container .botao-icone-pesquisa {
+    padding: 2px;
+}
+
+.inputs {
+    padding: 8px;
+    border: 1px solid var(--prata);
+    border-radius: 2px;
+    color: var(--quantum);
+}
+
+.input-pesquisar:focus,
+button:focus {
+    outline: 1px solid var(--quantum);
+}
+
+#form-procura-contato {
+    display: flex;
+}
+
+/*   TABELA   */
+table {
+    width: 100%;
+    border: 1px solid var(--prata);
+    border-radius: 2px;
+    border-spacing: 0;
+    color: var(--quantum);
+}
+
+th {
+    background-color: var(--azul);
+    color: var(--branco-fumaca);
+    font-weight: normal;
+}
+
+td, th {
+    padding: 16px 0;
+    text-align: center;
+}
+
+tbody tr:hover {
+    background-color: #bebebe20;
+}
+
+/*   MODAL   */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-width: 100%;
+    background-color: #11111190;
+    display: none;
+}
+
+.modal {
+    margin: auto;
+    padding: 24px;
+    border-radius: 2px;
+    background-color: var(--branco-fumaca);
+    max-width: 480px;
+}
+
+.modal form {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.modal .inputs,
+.modal h2 {
+    width: 100%;
+    margin-block-end: 16px;
+}
+
+.modal .lista-botoes {
+    width: 100%;
+}
+
+.modal .lista-botoes {
+    text-align: right;
+}
